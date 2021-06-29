@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>クエリーの練習</title>
+<meta charset="utf-8">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#parent_area").on("click", "#click_btn", function(){
+    alert("イベントが実行されました。");
+    });
+});
+</script>
+</head>
+<body>
+	<div id="parent_area">
+		<button>Microsoft</button>
+		<button id="click_btn">ここ</button>
+		<button>Amazon</button>
+	</div>
+</body>
+</html>

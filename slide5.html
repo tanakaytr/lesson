@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スライド練習</title>
+<link rel="stylesheet" href="toggles-full.css">
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="toggles.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$(".toggle").toggles({
+    drag : true,
+	click : true,
+	height : 50
+	});
+$(".toggle").on('toggle', function(e, active){
+  if(active){
+    alert("ON:DIVを表示");
+    $("#slide").show('fast').animate({"marginLeft":"Opx"});
+  } else {
+    alert("OFF:DIVを表示");
+    $("#slide").animate({"marginLeft":"40Opx"}).hide('fast');
+  }
+});
+});
+</script>
+<style>
+#content {
+	color: #fff;
+	padding: 15px;
+	font-size: 12px;
+	background-color: #243300;
+}
+
+h1 {
+	text-shadow: 4px 4px 7px black
+}
+
+pre {
+	color: #333;
+	padding: 5px;
+	background-color: #fff;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis
+}
+
+#toggle {
+	width: 300px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="content">
+		<h1>toggleライブラリの応用</h1>
+		<div id="toggle" class="toggle-soft">
+			<div class="toggle toggle-select" data-type="select"></div>
+		</div>
+		<div>
+			<p>$('.toggle').toggles()に設定するプロパティ一覧</p>
+			<pre id="slide">
+		<code>
+		$('.toggle').toggles({
+		drag : true,
+		click : true,
+		text : {
+		  on : 'ON',
+		  off : 'OFF'
+		},
+		on : true,
+		animate : 250,
+		transition : 'ease-in-out',
+		checkbox : null,
+		clicker : null,
+		width : 50,
+		height : 20,
+		type : 'compact'
+		});
+		</code>
+		</pre>
+		</div>
+	</div>
+</body>
+</html>

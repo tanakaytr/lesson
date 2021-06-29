@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>クエリー練習</title>
+<style>
+input {
+	width: 300px;
+}
+</style>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#change_text").change(function(){
+    alert("チェンジ,テキスト");
+  });
+});
+</script>
+</head>
+<body>
+
+	<p>
+		textboxに文字を入力したら、何もない箇所をクリックしてね。<br> <input type="text"
+			id="change_text" placeholder="例) 12345">
+
+	</p>
+
+</body>
+</html>

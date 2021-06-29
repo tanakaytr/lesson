@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スライド練習</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="jquery.tabslet.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.tabs').tabslet({
+    autorotate: true,
+    delay : 3000
+});
+});
+</script>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="typography.css">
+</head>
+<body>
+	<h1>tabsletの練習</h1>
+	<h2>Rotation</h2>
+	<div class="tabs tabs_rotate">
+		<ul class="horizontal">
+			<li><a href="#tab-1">コンテンツ１</a></li>
+			<li><a href="#tab-2">コンテンツ２</a></li>
+			<li><a href="#tab-3">コンテンツ３</a></li>
+			<li><a href="#tab-4">コンテンツ4</a></li>
+		</ul>
+		<div id="tab-1">
+			<h3>コンテンツ１をセンタk</h3>
+		</div>
+		<div id="tab-2">
+			<h3>コンテンツ2をセンタk</h3>
+		</div>
+		<div id="tab-3">
+			<h3>コンテンツ3をセンタk</h3>
+		</div>
+		<div id="tab-4">
+			<h3>コンテンツ4をセンタk</h3>
+		</div>
+	</div>
+</body>
+</html>

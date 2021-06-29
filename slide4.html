@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スライド練習</title>
+<link rel="stylesheet" href="liteaccordion.css">
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="jquery.easing.1.3.js"></script>
+<script src="liteaccordion.jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+$("#contents").liteAccordion({
+	onTriggerSlide : function(){
+	  this.find('fingcaption').fadeIn();
+	},
+	autoPlay : true,
+	slideSpeed : 1000,
+	theme : 'dark',
+	cycleSpeed : 3000,
+	enumerateSlides : true
+	}).find('figcaption:first').show();
+});
+</script>
+</head>
+<body>
+	<div id="contents">
+		<h1>ライトアコーディオンライブラリ</h1>
+		<ol>
+			<li>
+				<h2>
+					<span>Slide One</span>
+				</h2>
+				<div>
+					<figure>
+						<img src="img-demo/1.jpg" alt="image" />
+						<figcaption class="ap-caption">Slide One</figcaption>
+					</figure>
+				</div>
+			</li>
+			<li>
+				<h2>
+					<span>Slide Two</span>
+				</h2>
+				<div>
+					<figure>
+						<img src="img-demo/2.jpg" alt="image" />
+						<figcaption class="ap-caption">Slide Two</figcaption>
+					</figure>
+				</div>
+			</li>
+			<li>
+				<h2>
+					<span>Slide Three</span>
+				</h2>
+				<div>
+					<figure>
+						<img src="img-demo/3.jpg" alt="image" />
+						<figcaption class="ap-caption">Slide Three</figcaption>
+					</figure>
+				</div>
+			</li>
+			<li>
+				<h2>
+					<span>Slide Four</span>
+				</h2>
+				<div>
+					<figure>
+						<img src="img-demo/4.jpg" width="768" alt="image" />
+						<figcaption class="ap-caption">Slide Four</figcaption>
+					</figure>
+				</div>
+			</li>
+			<li>
+				<h2>
+					<span>Slide Five</span>
+				</h2>
+				<div>
+					<figure>
+						<img src="img-demo/5.jpg" alt="image" />
+						<figcaption class="ap-caption">Slide Five</figcaption>
+					</figure>
+				</div>
+			</li>
+			<li>
+				<h2>
+					<span>Slide Six</span>
+				</h2>
+				<div>
+					<figure>
+						<img src="img-demo/3.jpg" alt="image" />
+						<figcaption class="ap-caption">Slide Six</figcaption>
+					</figure>
+				</div>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

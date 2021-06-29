@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>クエリーの練習</title>
+<meta charset="utf-8">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#click_btn").hover(
+  function(){
+    $("#description").css("color", "red");
+  },
+  function(){
+    $("#description").css("color", "black");
+  }
+  );
+});
+</script>
+</head>
+<body>
+		<button id="click_btn">ここをマウスオーヴァー</button>
+		<p id="description">マウスが上に乗ったら赤文字、上から外れたら黒文字</p>
+	
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スライド練習</title>
+<link rel="stylesheet" href="alertify.core.css">
+<link rel="stylesheet" href="alertify.default.css" id="toggleCSS" />
+<meta name="viewpoint" content="width=device-width">
+<style>
+.alertify-log-custom {
+	background-color: blue;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#" id="alert">Alert ダイアログ</a></li>
+		<li><a href="#" id="confirm">C ダイアログ</a></li>
+		<li><a href="#" id="prompt">P ダイアログ</a></li>
+		<li><a href="#" id="labels">C ダイアログ</a></li>
+		<li><a href="#" id="focus">B ダイアログ</a></li>
+		<li><a href="#" id="order">Bu オーダー</a></li>
+	</ul>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="alertify.min.js"></script>
+	<script>
+	function reset(){
+	$("#toggleCSS").attr("href", "alertify.default.css");
+	alertify.set({
+	  labels : {
+	    ok : "OK",
+	    cancel : "Cancel"
+	  },
+	  delay : 5000,
+	  buttonReverse : false,
+	  buttonFocus : "ok"
+	});
+	}
+	$("#alert").on('click', function(){
+	  reset();
+	  alertify.alert("アラート表示");
+	  return false;
+	});
+	$("#confirm").on('click', function(){
+	  reset();
+	  alertify.confirm("これで会ってますか？", function(e){
+	    if(e){
+	      alertify.success("はい、合ってます");
+	    } else {
+	      alertify.error("いいえ、違います。");
+	    }
+	  });
+	  return false;
+	});
+	$("#prompt").on('click', function(){
+	  reset();
+	  alertify.prompt("入力してください", function(e, str){
+	    if(e){
+	      alertify.success("入力内容：" + str);
+	    } else {
+	      alertify.error("キャンセル");
+	    }
+	  }, "文字列を入力");
+	  return false;
+	});
+	$("#labels").on('click', function(){
+	  reset();
+	  alertify.set({labels : {ok : "イエス", cancel : "ノー"} });
+	  alertify.confirm("このサンプルはボタン名変更の方法をお願いします。", function(e){
+	    if(e){
+	      alertify.success("イエスを選択");
+	    } else {
+	      alertify.error("ノーを選択");
+	    }
+	  });
+	  return false;
+	});
+	$("#focus").on('click', function(){
+	  reset();
+	  alertify.set({buttonFocus : "cancel" });
+	  alertify.confirm("Confirm dialog with cancel button focused", function(e){
+	    if(e){
+	      alertify.success("OKを選択");
+	    } else {
+	      alertify.error("Cancelを選択");
+	    }
+	  });
+	  return false;
+	});
+	$("#order").on('click', function(){
+	  reset();
+	  alertify.set({buttonReverse : true  });
+	  alertify.confirm("Confirm dialog with reversed button order", function(e){
+	    if(e){
+	      alertify.success("OKを選択");
+	    } else {
+	      alertify.error("cancelを選択");
+	    }
+	  });
+	  return false;
+	});
+	</script>
+</body>
+</html>

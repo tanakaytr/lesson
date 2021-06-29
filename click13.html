@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スマホタッチ</title>
+<style>
+input {
+	width: 300px;
+}
+</style>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#change_sct").change(function(){
+    alert("チェンジ");
+  });
+});
+</script>
+</head>
+<body>
+
+	<p>
+		<select id="change_sct">
+			<option value="1">他を選択１</option>
+			<option value="2">他を選択2</option>
+			<option value="3">他を選択3</option>
+			<option value="4">他を選択4</option>
+			<option value="5">他を選択5</option>
+			<option value="6">他を選択6</option>
+		</select>
+
+	</p>
+
+</body>
+</html>

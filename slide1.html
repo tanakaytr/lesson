@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スライド練習</title>
+<link rel="stylesheet" href="jquery.bxslider.css">
+<script
+	src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="jquery.bxslider.js"></script>
+<script>
+$(document).ready(function(){
+$('.bxslider').bxSlider({
+	mode : 'horizontal',
+	speed : 500,
+	startSlide : 0,
+	auto : true,
+	autoControls : true,
+	adaptiveHeight : true,
+	captions : false
+	});
+});
+</script>
+<style>
+</style>
+</head>
+<body>
+    <div id="content">
+    <h1>スライダーライブラリ</h1>
+    <div class="slider" style="width:600px;">
+    <ul class="bxslider">
+    <li><img src="img/photo1.jpeg" title="Aの画像を表示します。" ></li>
+    <li><img src="img/photo2.jpeg" title="Bの画像を表示します。" ></li>
+    <li><img src="img/photo3.jpeg" title="Cの画像を表示します。" ></li>
+    <li><img src="img/photo4.jpeg" title="Dの画像を表示します。" ></li>
+    <li><img src="img/photo5.jpeg" title="Eの画像を表示します。" ></li>
+    <li><img src="img/photo6.jpeg" title="Fの画像を表示します。" ></li>
+    </ul>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>クエリー練習</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="jquery.easing.1.3.js"></script>
+<style>
+div {
+	height: 50px;
+	width: 50px;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$("#move_box_top").animate({
+	  "marginLeft" : "600px"
+	},
+	{
+	  duration : 1500,
+	  easing : "easeInQuad"
+	}
+);
+	$("#move_box_bottom").animate({
+	  "marginLeft" : "600px"
+	},
+	{
+	  duration : 1500,
+	  easing : "linear"
+	}
+);
+});
+</script>
+<style>
+</style>
+</head>
+<body>
+	<div id="move_box_top" style="background-color: #555"></div>
+	<div id="move_box_bottom" style="background-color: #f00"></div>
+</body>
+</html>

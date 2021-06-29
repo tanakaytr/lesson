@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>スライド練習</title>
+<style>body{overflow : hidden;}</style>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="slidr.min.js"></script>
+<script>
+$(document).ready(function(){
+
+var s = slidr.create('slidr-img', {
+	breadcrumbs : true,
+	controls : 'corner',
+	direction : 'v',
+	fade : true,
+	keyboard : true,
+	overflow : true,
+	pause : false,
+	theme : '#222',
+	timing : {'cube' : '0.5s ease-in'},
+	touch : true,
+	transition : 'cube'
+	});
+	s.add('h', ['A1', 'A2', 'A3', 'A6'], 'fade');
+	s.add('v', ['A1', 'A2', 'A3', 'A4', 'A5', 'A6'], 'cube');
+	s.start();
+});
+</script>
+</head>
+<body>
+	<div id="content">
+		<h1>スライダー.jsライブラリ</h1>
+		<div style="width: 600px;">
+			<div id="slidr-img" style="display: inline-block">
+				<img data-slidr="A1" src="img/photo1.jpeg"> 
+				<img data-slidr="A2" src="img/photo2.jpeg"> 
+				<img data-slidr="A3" src="img/photo3.jpeg"> 
+				<img data-slidr="A4" src="img/photo4.jpeg"> 
+				<img data-slidr="A5" src="img/photo5.jpeg"> 
+				<img data-slidr="A6" src="img/photo6.jpeg">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

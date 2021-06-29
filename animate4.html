@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>クエリー練習</title>
+<style>
+div {
+	height: 300px;
+	width: 300px;
+	background-color: #e8f836
+}
+</style>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="jquery.easing.1.3.js"></script>
+<script>
+$(document).ready(function(){
+	$("#move_box").animate({
+	  "marginLeft" : "600px",
+	  "width" : "100px",
+	  "height" : "100px"
+	},
+	{
+	  duration : 3000,
+	  easing : "easeInQuad",
+	  complete : function(){
+	   $(this).text('完了');
+	  }
+	}
+);
+	$("#move_box_bottom").animate({
+	  "marginLeft" : "600px"
+	},
+	{
+	  duration : 1500,
+	  easing : "linear"
+	}
+);
+});
+</script>
+<style>
+</style>
+</head>
+<body>
+	<div id="move_box">></div>
+</body>
+</html>
